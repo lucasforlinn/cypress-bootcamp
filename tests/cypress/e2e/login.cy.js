@@ -4,9 +4,9 @@ import mapPage from '../support/pages/Map'
 describe('Login', () => {
   it('deve logar com sucesso', () => {
     const user = {
-      name: 'Fernando',
-      instagram: '@papitorocks',
-      password: 'pwd123'
+      name: 'Lucas',
+      instagram: '@lucasforlinn',
+      password: 'pwa123'
     }
 
     loginPage.go()
@@ -18,7 +18,7 @@ describe('Login', () => {
 
   it('nao deve logar com senha invalida', () => {
     const user = {
-      instagram: '@papitorocks',
+      instagram: '@lucasforlinn',
       password: '123456'
     }
 
@@ -31,7 +31,7 @@ describe('Login', () => {
 
   it('nao deve logar instagram inexistente', () => {
     const user = {
-      instagram: '@rockspapito',
+      instagram: '@forlinlucas',
       password: '123456'
     }
 
@@ -56,7 +56,7 @@ describe('Login', () => {
 
   it('senha deve ser obrigatória', ()=> {
     const user = {
-      instagram: '@joao'
+      instagram: '@teste'
     }
 
     loginPage.go()

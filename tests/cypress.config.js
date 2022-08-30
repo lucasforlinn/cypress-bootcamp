@@ -20,7 +20,7 @@ module.exports = defineConfig({
         geolocation: 'allow'
       },
       mongodb: {
-        'uri': 'mongodb+srv://qa:cademy@cluster0.sqvubnt.mongodb.net/QtruckDB?retryWrites=true&w=majority',
+        'uri': 'mongodb+srv://qa:cademy@cluster0.0qerzme.mongodb.net/QtruckDB?retryWrites=true&w=majority',
         'database': 'QtruckDB'
       }
     }

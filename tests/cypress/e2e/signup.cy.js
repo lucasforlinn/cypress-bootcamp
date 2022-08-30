@@ -3,8 +3,8 @@ import signupPage from '../support/pages/Signup'
 describe('Signup', () => {
     it('deve cadastrar um novo usuário', () => {
         const user = {
-            name: 'Becca Milano',
-            instagram: '@becca_milano',
+            name: 'Mr Saizen',
+            instagram: '@mrsaizen',
             password: 'pwd123'
         }
 
@@ -23,8 +23,8 @@ describe('Signup', () => {
 
     it('não deve cadastrar com instagram duplicado', ()=> {
         const user = {
-            name: 'Érick Jacquin',
-            instagram: '@jacquin',
+            name: 'Fernando Superman',
+            instagram: '@superman',
             password: 'pwd123'
         }
 
