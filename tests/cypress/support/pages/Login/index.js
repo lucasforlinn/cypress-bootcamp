@@ -6,8 +6,8 @@ class LoginPage {
         this.modal = modal
     }
 
-    go() {
-        cy.visit('/')
+    go(lat = '-26.918740872124133', long = '-49.06612694263459') {
+        cy.visit('/', this.mockLocation(lat, long))
     }
 
     form(user) {
@@ -21,6 +21,19 @@ class LoginPage {
 
     goToSignup() {
         cy.contains('a', 'Cadastre-se').click()
+    }
+
+    mockLocation(latitude, longitude) {
+        return {
+            onBeforeLoad(win) {
+                cy.stub(win.navigator.geolocation, "getCurrentPosition").callsFake((cb, err) => {
+                    if (latitude && longitude) {
+                        return cb({ coords: { latitude, longitude } })
+                    }
+                    throw err({ code: 1 })
+                });
+            }
+        }
     }
 }
 

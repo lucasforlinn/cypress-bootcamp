@@ -37,8 +37,8 @@ describe('Recomendação', () => {
         }
 
         const foodtruck = {
-            latitude: '-26.916444922066976',
-            longitude: '-49.10482048988343',
+            latitude: '-26.892650390195577',
+            longitude: '-49.097559750080116',
             name: 'Trailer do BBzinho',
             details: 'Canetas mais fiéis do mercado',
             opening_hours: 'das 8h às 20h',

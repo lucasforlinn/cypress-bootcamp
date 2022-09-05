@@ -80,7 +80,7 @@ Cypress.Commands.add('apiCreateUser', (payload)=> {
 })
 
 Cypress.Commands.add('uiLogin', (user)=> {
-    loginPage.go()
+    loginPage.go('-26.893406304860378', '-49.09837245941163')
     loginPage.form(user)
     loginPage.submit()
 
