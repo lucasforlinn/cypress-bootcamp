@@ -7,8 +7,8 @@ describe('Avaliações de foodtruck', ()=> {
     it('fazer uma nova avaliação', ()=> {
 
         const user = {
-            name: 'Justin Bieber',
-            instagram: '@Bieber',
+            name: 'Caike Pro',
+            instagram: '@caikepro',
             password: 'pwd123'
         }
 
@@ -35,7 +35,7 @@ describe('Avaliações de foodtruck', ()=> {
         mapPage.goToFoodtruck(foodtruck.name)
         foodTruckPage.addReview(review)
 
-        cy.wait(10000)
+        foodTruckPage.checkReview(review, user)
 
     })
 
