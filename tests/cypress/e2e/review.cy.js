@@ -1,3 +1,6 @@
+import mapPage from '../support/pages/Map'
+import foodTruckPage from '../support/pages/Foodtruck'
+
 
 describe('Avaliações de foodtruck', ()=> {
 
@@ -18,11 +21,19 @@ describe('Avaliações de foodtruck', ()=> {
             open_on_weekends: false
         }
 
+        const review = {
+            comment: 'O server ta lindo, mas ja ta atrasado 2 semanas',
+            stars: 3
+        }
+
         cy.apiCreateUser(user)
         cy.apiLogin(user)
         cy.apiCreateFoodTruck(foodtruck)
 
         cy.uiLogin(user)
+
+        mapPage.goToFoodtruck(foodtruck.name)
+        foodTruckPage.addReview(review)
 
         cy.wait(10000)
 
